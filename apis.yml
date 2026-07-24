@@ -34,6 +34,8 @@ modified: '2026-07-24'
 specificationVersion: '0.19'
 apis: []
 common:
+- type: DomainSecurity
+  url: security/cortico-domain-security.yml
 - type: Website
   url: https://cortico.health/
 - type: About
@@ -41,6 +43,8 @@ common:
 - type: Pricing
   url: https://cortico.health/pricing/
 - type: Blog
+  url: https://cortico.health/article/
+- type: Support
   url: https://cortico.health/resources/
 - type: GitHubOrganization
   url: https://github.com/cortico-health
@@ -48,6 +52,8 @@ common:
   url: https://cortico.health/privacy-policy/
 - type: TermsOfService
   url: https://cortico.health/legal/
+- type: LLMsTxt
+  url: llms/cortico-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

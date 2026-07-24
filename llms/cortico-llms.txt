@@ -1,0 +1,46 @@
+# Cortico Health
+
+> Patient engagement software for medical clinics that integrates with EMRs to reduce administrative work and improve patient experience. Also a healthcare directory for patients to find clinics, pharmacies, and laboratories across North America.
+
+Cortico is the healthcare connection platform linking patients, medical clinics, and health records across North America.
+
+Cortico Health Technologies, founded in 2019 in Vancouver BC, automates over 3 million administrative tasks monthly for 6,000+ healthcare professionals across North America. The platform serves two audiences: medical clinics seeking workflow automation, and patients seeking healthcare access. Cortico holds SOC 2 Type II and ISO 27001 certifications and is compliant with HIPAA, PIPEDA, and PHIPA.
+
+## For Clinics
+
+- [Online Booking](https://cortico.health/features/patient-scheduling-software/): 24/7 patient self-scheduling integrated with EMR calendars
+- [Automated Reminders](https://cortico.health/features/medical-appointment-reminders/): Email and text appointment reminders to reduce no-shows
+- [Patient Messaging](https://cortico.health/features/patient-messaging/): Secure two-way communication from within the EMR
+- [Intake Forms](https://cortico.health/features/patient-intake-software/): Digital intake forms that sync directly to the EMR
+- [Telemedicine](https://cortico.health/features/telemedicine/): Secure video consultations with integrated EMR note-taking
+- [Healthcare AI Automations](https://cortico.health/features/healthcare-ai-automations/): Automated patient communication to free up phone lines, plus secure, privacy-compliant clinician LLM access with patient context
+- [Request to Book](https://cortico.health/features/request-to-book/): Online specialist booking for referral automation
+- [Payment Automation](https://cortico.health/features/healthcare-payment-automation/): Multi-modal private pay, invoicing, and no-show fee collection
+- [Patient Tasks](https://cortico.health/features/patient-tasks/): Assign and track patient tasks
+- [Clinic Website](https://cortico.health/features/clinic-website/): Turn-key integrated clinic website with booking
+- [Digital Signatures](https://cortico.health/features/digital-health-signatures/): Secure document verification
+- [Self-Registration](https://cortico.health/features/patient-self-registration/): Let patients update their own demographic details
+- [EMR Task Automation](https://cortico.health/features/emr-task-automation/): Automate follow-ups from the EMR
+- [Personal Health Records](https://cortico.health/features/personal-health-records/): Patient portal for instant access to files
+- [Pricing](https://cortico.health/pricing/): Three plans — Essentials ($86/mo per FTE), Premium ($119/mo), Elite ($199/mo) with 90-day money-back guarantee
+
+## For Patients
+
+- [Patient Portal](https://cortico.health/patients/): Manage appointments, message providers, view test results, and request prescription refills
+- [Find a Clinic](https://cortico.health/clinics/): Directory of 94,000+ clinics across Canada and the US, searchable by location and specialty
+- [Find a Pharmacy](https://cortico.health/pharmacies/): Pharmacy directory searchable by province
+- [Find a Laboratory](https://cortico.health/laboratories/): Laboratory directory searchable by province
+- [Specialties](https://cortico.health/specialties/walk-in/): Browse clinics by specialty — walk-in, family doctor, pediatrician, cardiologist, and 60+ more
+
+## Company
+
+- [About](https://cortico.health/about/): Company story, mission, and leadership — founded by Clark Van Oyen (CTO) and Dr. Greg Baldwin (pediatrician)
+- [Resources](https://cortico.health/resources/): eLearning videos, knowledge base, and support for clinics and patients
+- [Articles](https://cortico.health/article/): Healthcare industry articles and guides
+
+## Optional
+
+- [Clinics by Province](https://cortico.health/clinics/british-columbia/): Provincial clinic directories (all Canadian provinces and US states available)
+- [Specialties by Province](https://cortico.health/specialties/walk-in/british-columbia/): Specialty directories filtered by region
+- [Institutions](https://cortico.health/institutions/): Information for health systems and institutional partners
+- [Virtual Clinics](https://cortico.health/virtual-clinics/): Virtual clinic and telehealth information
