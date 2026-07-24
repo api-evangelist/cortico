@@ -1,0 +1,53 @@
+aid: cortico
+url: https://raw.githubusercontent.com/api-evangelist/cortico/refs/heads/main/apis.yml
+name: Cortico
+kind: company
+description: >-
+  Cortico (Cortico Health Technologies) is a Vancouver, British Columbia based
+  healthcare connection platform, founded in 2019, that links patients, medical
+  clinics, and health records across Canada and the United States. Its
+  patient-engagement suite layers online booking, automated appointment
+  reminders, secure two-way patient messaging, digital intake forms,
+  telemedicine, specialist e-referrals, payments, and AI-driven administrative
+  automation on top of the electronic medical records (EMRs) clinics already
+  run — most notably a supported two-way integration with OSCAR EMR through that
+  system's REST/SOAP web services, plus SMART on FHIR contextual launch and
+  robotic process automation (RPA). Cortico is SOC 2 Type II and ISO 27001
+  certified and compliant with HIPAA, PIPEDA, and PHIPA. Cortico consumes EMR
+  and FHIR interfaces rather than publishing its own public developer API: as of
+  this review there is no public developer portal, API reference, or FHIR
+  CapabilityStatement, and integration is delivered through a partnership and
+  onboarding model rather than self-serve API access.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Healthcare
+- Canada
+- Patient Engagement
+- EMR
+- OSCAR EMR
+- SMART on FHIR
+- Telemedicine
+- Clinical Workflow Automation
+- Interoperability
+created: '2026-07-24'
+modified: '2026-07-24'
+specificationVersion: '0.19'
+apis: []
+common:
+- type: Website
+  url: https://cortico.health/
+- type: About
+  url: https://cortico.health/about/
+- type: Pricing
+  url: https://cortico.health/pricing/
+- type: Blog
+  url: https://cortico.health/resources/
+- type: GitHubOrganization
+  url: https://github.com/cortico-health
+- type: PrivacyPolicy
+  url: https://cortico.health/privacy-policy/
+- type: TermsOfService
+  url: https://cortico.health/legal/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

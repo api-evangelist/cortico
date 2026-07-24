@@ -1,0 +1,160 @@
+aid: cortico
+name: Cortico
+review:
+  question: Does Cortico expose a public, documented developer API, FHIR CapabilityStatement, or downloadable OpenAPI for third-party developers?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+  homeMarket: Canada
+findings:
+  summary: |
+    Cortico (Cortico Health Technologies, cortico.health) is a Vancouver,
+    British Columbia based patient-engagement and clinic-workflow platform
+    founded in 2019, serving Canada and the United States. It adds online
+    booking, appointment reminders, secure patient messaging, digital intake,
+    telemedicine, e-referrals, payments, and AI/RPA administrative automation
+    on top of the EMRs clinics already use. Cortico is a CONSUMER of EMR and
+    FHIR interfaces, not a publisher of a public developer API. No first-party
+    developer portal, API reference, downloadable OpenAPI/Swagger, or FHIR
+    CapabilityStatement (metadata) is publicly served. Integration — most
+    prominently with OSCAR EMR — is delivered through a partnership/onboarding
+    model in which the clinic's OSCAR service provider issues API credentials
+    and enables endpoints. SMART on FHIR is used for contextual launch of
+    Cortico inside the EMR, not exposed as an inbound Cortico API. This is an
+    honest identity stub for a real healthcare company with a real integration
+    story but no self-serve public API surface.
+  homeMarket: Canada
+  developerPortal:
+    found: false
+    probed:
+      - url: https://developer.cortico.ca/
+        status: 404
+      - url: https://developer.cortico.health/
+        status: 503
+      - url: https://docs.cortico.ca/
+        status: 404
+      - url: https://docs.cortico.health/
+        status: 503
+      - url: https://api.cortico.ca/
+        status: 404
+      - url: https://api.cortico.health/
+        status: 503
+      - url: https://fhir.cortico.health/
+        status: 503
+      - url: https://cortico.health/developers/
+        status: 404
+      - url: https://cortico.health/api
+        status: 404
+      - url: https://cortico.health/api-docs
+        status: 404
+    note: |
+      No developer portal resolves. The developer./docs./api./fhir. subdomains
+      on cortico.health return 503 (Cloudflare/edge, not public documentation);
+      the cortico.ca equivalents return 404. cortico.ca 301-redirects to
+      cortico.health, which is the canonical corporate site with no developer
+      section.
+  fhirCapabilityStatement:
+    found: false
+    version: null
+    resources: []
+    probed:
+      - url: https://api.cortico.health/metadata
+        status: 503
+      - url: https://api.cortico.health/fhir/metadata
+        status: 503
+      - url: https://api.cortico.health/.well-known/smart-configuration
+        status: 503
+      - url: https://cortico.health/.well-known/smart-configuration
+        status: 503
+      - url: https://cortico.health/.well-known/openid-configuration
+        status: 503
+    note: |
+      No FHIR CapabilityStatement/metadata or SMART-on-FHIR .well-known
+      document is anonymously served. Cortico advertises "Smart on FHIR"
+      technology for launching its module inside the EMR, but that is a
+      consumption/launch pattern against the EMR's FHIR server, not a
+      Cortico-hosted FHIR endpoint.
+  downloadableSpecs:
+    found: false
+    count: 0
+    probed:
+      - url: https://cortico.health/openapi.json
+        status: 404
+      - url: https://cortico.health/swagger.json
+        status: 404
+    note: No OpenAPI/Swagger document is published or discoverable.
+  authModel:
+    scheme: none-public
+    note: |
+      No public API means no publicly documented auth model. For its EMR
+      integrations, credentials are provisioned per clinic by the EMR service
+      provider (for OSCAR, the hosting provider issues API credentials and
+      enables the relevant /ws/services/ REST/SOAP endpoints). SMART on FHIR
+      (OAuth2 authorization-code contextual launch) is used to launch Cortico
+      within the EMR. No patient/*.read, system/*.rw, or other SMART scopes
+      are published by Cortico for inbound access.
+  standardsConformance:
+    usCore: false
+    ukCore: false
+    auCore: false
+    caCore: null
+    daVinci: false
+    carin: false
+    note: |
+      No conformance claims are made or discoverable, since Cortico publishes
+      no FHIR server or CapabilityStatement. As a Canadian vendor it operates
+      in the pan-Canadian interoperability context stewarded by Canada Health
+      Infoway (CA Core / CA Baseline), but no CA Core conformance is asserted
+      in any public artifact.
+  compliance:
+    - SOC 2 Type II
+    - ISO 27001
+    - HIPAA
+    - PIPEDA
+    - PHIPA
+  gatedVsSelfServe: gated
+  githubOrganization:
+    url: https://github.com/cortico-health
+    status: 200
+    note: |
+      Real GitHub org (display "Cortico Health") with ~6 public repos
+      (oscar-enhancement-suite [archived JS], cortico-static, cortico-podcast,
+      MedSafe-Dx, django-apscheduler fork, telnyx-python fork). None contain a
+      Cortico OpenAPI, FHIR spec, or SDK. NOTE: github.com/cortico is an
+      UNRELATED org (numerology/home-automation), not Cortico Health.
+transports:
+  - protocol: REST
+    scheme: https
+    documented: false
+    note: |
+      Cortico consumes OSCAR EMR REST/SOAP web services (/ws/services/) but
+      does not publish its own documented REST API.
+  - protocol: SMART on FHIR
+    scheme: https
+    documented: false
+    note: |
+      Used for contextual launch of Cortico inside the EMR; not a
+      Cortico-hosted FHIR/OAuth endpoint.
+sources:
+  - url: https://cortico.health/
+    type: Website
+    status: 200
+    note: Canonical corporate site (cortico.ca 301-redirects here). No developer section.
+  - url: https://cortico.health/about/
+    type: About
+    status: 200
+    note: Company overview — Vancouver, BC; founded 2019; North America.
+  - url: https://cortico.health/pricing/
+    type: Pricing
+    status: 200
+  - url: https://cortico.health/article/oscar-emr-api-integration/
+    type: Documentation
+    status: 200
+    note: |
+      Describes the OSCAR EMR integration as partner-provisioned access to
+      OSCAR's own /ws/services/ REST/SOAP endpoints; confirms no public Cortico
+      API or developer portal.
+  - url: https://github.com/cortico-health
+    type: GitHubOrganization
+    status: 200
+    note: Cortico Health org; no API specs/SDKs published.
