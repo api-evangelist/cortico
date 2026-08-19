@@ -31,7 +31,7 @@ tags:
 - Interoperability
 created: '2026-07-24'
 modified: '2026-07-24'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis: []
 common:
 - type: DomainSecurity
