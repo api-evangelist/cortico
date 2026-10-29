@@ -1,4 +1,4 @@
-# Cortico (cortico)
+# Cortico
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,46 +64,85 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Cortico (Cortico Health Technologies) is a Vancouver, British Columbia based healthcare connection platform, founded in 2019, that links patients, medical clinics, and health records across Canada and the United States. Its patient-engagement suite layers online booking, automated appointment reminders, secure two-way patient messaging, digital intake forms, telemedicine, specialist e-referrals, payments, and AI-driven administrative automation on top of the electronic medical records (EMRs) clinics already run — most notably a supported two-way integration with OSCAR EMR through that system's REST/SOAP web services, plus SMART on FHIR contextual launch and robotic process automation (RPA). Cortico is SOC 2 Type II and ISO 27001 certified and compliant with HIPAA, PIPEDA, and PHIPA.
+Cortico (Cortico Health Technologies) is a Vancouver, British Columbia based healthcare connection platform, founded in 2019, that links patients, medical clinics, and health records across Canada and the United States. Its patient-engagement suite layers online booking, automated appointment reminders, secure two-way patient messaging, digital intake forms, telemedicine, specialist e-referrals, payments, and AI-driven administrative automation on top of the electronic medical records (EMRs) clinics already run — most notably a supported two-way integration with OSCAR EMR through that system's REST/SOAP web services, plus SMART on FHIR contextual launch and robotic process automation (RPA). Cortico is SOC 2 Type II and ISO 27001 certified and compliant with HIPAA, PIPEDA, and PHIPA. Cortico consumes EMR and FHIR interfaces rather than publishing its own public developer API: as of this review there is no public developer portal, API reference, or FHIR CapabilityStatement, and integration is delivered through a partnership and onboarding model rather than self-serve API access.
 
-Cortico **consumes** EMR and FHIR interfaces rather than publishing its own public developer API. As of this review there is no public developer portal, API reference, downloadable OpenAPI/Swagger, or FHIR CapabilityStatement. Integration with OSCAR EMR and other systems is delivered through a partnership and onboarding model, where the clinic's EMR service provider issues API credentials and enables the relevant endpoints. This profile is therefore an identity stub — honest about a real healthcare company with a real integration story but no self-serve public API surface.
+**Areas:** Healthcare · Canada · Patient Engagement · Electronic Health Records · OSCAR EMR · SMART on FHIR · Telehealth · Clinical Workflow Automation · Interoperability
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/cortico/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/cortico/refs/heads/main/apis.yml)
+## Cortico on APIs.io
 
-**Home market:** Canada (headquartered in Vancouver, BC; also serves the United States)
+Everything profiled for Cortico is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/cortico/](https://apis.io/providers/cortico/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Healthcare
-- Canada
-- Patient Engagement
-- EMR
-- OSCAR EMR
-- SMART on FHIR
-- Telemedicine
-- Clinical Workflow Automation
-- Interoperability
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Cortico Domain Security](https://apis.io/security/cortico/cortico-domain-security/)
 
-No public, self-serve developer API is documented by Cortico. The company integrates into third-party EMRs (for example OSCAR EMR's `/ws/services/` REST and SOAP web services) and uses SMART on FHIR contextual launch and RPA to embed its patient-engagement tools. These are consumption patterns against other systems' APIs, not a Cortico-published API, so no `apis[]` entries are asserted.
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://cortico.health/)
-- [About](https://cortico.health/about/)
 - [Pricing](https://cortico.health/pricing/)
-- [Blog](https://cortico.health/resources/)
-- [GitHub Organization](https://github.com/cortico-health)
-- [Privacy Policy](https://cortico.health/privacy-policy/)
-- [Terms of Service](https://cortico.health/legal/)
+- [Support](https://cortico.health/resources/)
+- [Blog](https://cortico.health/article/)
+- [Terms of service](https://cortico.health/legal/)
+- [Privacy policy](https://cortico.health/privacy-policy/)
+- [GitHub](https://github.com/cortico-health)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 13.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 31.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.9** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/cortico/](https://apis.io/providers/cortico/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Cortico: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/cortico/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
